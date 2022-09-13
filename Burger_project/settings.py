@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'credentials_app',
+    'jazzmin',
     'burger_app',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'Burger_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_burgerking',
+        'NAME': 'db_burger',
         'USER': 'root',
         'PASSWORD': '',
         'PORT': '3307',
