@@ -12,7 +12,7 @@ class Category(models.Model):
         verbose_name='category'
         verbose_name_plural='categories'
 
-    def _str_(self):
+    def __str__(self):
         return '{}'.format(self.name)
 
 class Subcategory(models.Model):
@@ -27,7 +27,7 @@ class Subcategory(models.Model):
         verbose_name='subcategory'
         verbose_name_plural='subcategories'
 
-    def _str_(self):
+    def __str__(self):
         return '{}'.format(self.name)
 
 class Product(models.Model):
@@ -47,5 +47,5 @@ class Product(models.Model):
         verbose_name='product'
         verbose_name_plural='products'
 
-    def _str_(self):
+    def __str__(self):
         return '{}'.format(self.name)

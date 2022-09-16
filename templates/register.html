@@ -22,19 +22,19 @@
                 {% csrf_token %}
                 <h2 class="form-title">Create account</h2>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="username" id="name" placeholder="Your Name"/>
+                            <input type="text" class="form-input" name="username" id="name" placeholder="Your Name" required/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="first_name" id="name" placeholder="Your first Name"/>
+                            <input type="text" class="form-input" name="first_name" id="name" placeholder="Your first Name" pattern="^[A-Za_z][A-Za-z -]+$" title="The name should begin with capital letter Followed by uppercase or lowercase" class="form-control" required/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="last_name" id="name" placeholder="Your last Name"/>
+                            <input type="text" class="form-input" name="last_name" id="name" placeholder="Your last Name" pattern="^[A-Za_z][A-Za-z -]+$" title="The name should begin with capital letter Followed by uppercase or lowercase" class="form-control" required/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="phone" id="phone" placeholder="Your phone"/>
+                            <input type="text" class="form-input" name="phone" id="phone" placeholder="Your phone" pattern="[0-9]{10}" title="must contain 10 digits" />
                         </div> 
                         <div class="form-group">
-                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="must enter a valid email address"/>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
