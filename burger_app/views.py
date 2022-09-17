@@ -1,9 +1,12 @@
 from django.shortcuts import render
+from . models import Deals
 
 # Create your views here.
 
 def index(request):
-    return render(request,'index.html')
+    obj=Deals.objects.all()
+
+    return render(request,'index.html',{'result': obj})
 
 def home(request):
     return render(request,'home.html')

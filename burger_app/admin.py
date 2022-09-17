@@ -1,7 +1,13 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Category,Subcategory,Product
+from .models import Category,Subcategory,Product,Deals
+
+class DealsAdmin(admin.ModelAdmin):
+    list_display = ['name']
+
+admin.site.register(Deals, DealsAdmin)
+
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display=['name','slug']

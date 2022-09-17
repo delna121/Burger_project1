@@ -1,6 +1,19 @@
 from django.db import models
 
 # Create your models here.
+class Deals(models.Model):
+    name=models.TextField(max_length='250',blank=True)
+    image=models.ImageField(upload_to='deals',blank=False)
+
+
+    class Meta:
+        ordering=('name',)
+        verbose_name='Deal'
+        verbose_name_plural='Deals'
+
+    def __str__(self):
+        return '{}'.format(self.name)
+
 class Category(models.Model):
     name=models.CharField(max_length=250,unique=True)
     slug=models.SlugField(max_length=250,unique=True)
